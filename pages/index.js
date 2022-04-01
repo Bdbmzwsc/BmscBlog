@@ -15,7 +15,7 @@ import { Button } from '@mui/material';
 
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
-function MainF(){
+export default function MainF(props){
 
   const [bg,setBg]=React.useState("");
  //theme
@@ -62,35 +62,8 @@ function MainF(){
      </Box>
    );
    return( <Box sx={{bgcolor: "background.default"}}>
-      <Button>hihihi</Button>
+      <Button>a</Button>
    </Box>
    )
 }
 
-
-
-export default function App(){
-  const [mode, setMode] = React.useState('light');
-  const colorMode = React.useMemo(
-    () => ({
-      toggleColorMode: () => {
-        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
-      },
-    }),
-    [],
-  );
-
-  const theme = React.useMemo(
-    () =>
-      createTheme({
-        palette: {
-          mode,
-        },
-      }),
-    [mode],
-  );
-
-  return (
-        <MainF />
-  );
-}
