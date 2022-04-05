@@ -46,7 +46,7 @@ function MainF(){
      >
        <Box sx={{textAlign: "right",m: 1}}>
     <img src={bg}  width={100} height={100}/>
-   <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
+   <IconButton sx={{ ml: 1}} onClick={colorMode.toggleColorMode} color="inherit">
      {theme.palette.mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
    </IconButton>
        </Box>
@@ -76,7 +76,6 @@ function MainF(){
        </Box>
    )
 }
-
 
 
 export default function App(){
